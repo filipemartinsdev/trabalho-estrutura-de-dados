@@ -37,7 +37,6 @@ public class Util {
     public static Card getCardByName(char name){
         return switch (name){
             case 'A', 'a' -> new Card('A', 1);
-            case '1' -> new Card('1', 2);
             case '2' -> new Card('2', 3);
             case '3' -> new Card('3', 4);
             case '4' -> new Card('4', 5);
@@ -49,7 +48,7 @@ public class Util {
             case 'J', 'j' -> new Card('J', 11);
             case 'Q', 'q' -> new Card('Q', 12);
             case 'K', 'k' -> new Card('K', 13);
-            default -> new Card('X', 0);
+            default -> new Card('?', 0);
         };
     }
 }

@@ -8,8 +8,8 @@ public class App {
     public static Scanner scanner = new Scanner(System.in);
 
     public static BubbleSort<Card> bubbleSort = new BubbleSort();
-    public static InsertionSort<Card> insertionSort = new InsertionSort();
-    public static SelectionSort<Card> selectionSort = new SelectionSort();
+    public static SelectionSorte<Card> selectionSorte = new SelectionSorte();
+    public static InserctionSort<Card> inserctionSort = new InserctionSort();
 
     public static final List<Card> baralho = new ArrayList<>(List.of(
             new Card('A', 1),
@@ -91,13 +91,13 @@ public class App {
         }
         else if (methodId == 2){
             long start = System.currentTimeMillis();
-            selectionSort.sortPrintingCards(cardList);
+            inserctionSort.sortPrintingCards(cardList);
             long end = System.currentTimeMillis();
             System.out.println("Tempo de execução: "+(end-start)+" ms");
         }
         else if (methodId == 3){
             long start = System.currentTimeMillis();
-            insertionSort.sortPrintingCards(cardList);
+            selectionSorte.sortPrintingCards(cardList);
             long end = System.currentTimeMillis();
             System.out.println("Tempo de execução: "+(end-start)+" ms");
         }
