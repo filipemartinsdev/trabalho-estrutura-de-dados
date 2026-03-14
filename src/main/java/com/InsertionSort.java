@@ -2,7 +2,7 @@ package com;
 
 import java.util.List;
 
-public class SelectionSorte<T extends Comparable> {
+public class InsertionSort<T extends Comparable> {
     public List<T> sort(List<T> list) {
         if (list == null || list.size() < 2) return list;
 
