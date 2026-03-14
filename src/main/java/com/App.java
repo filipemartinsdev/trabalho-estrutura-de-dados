@@ -12,7 +12,7 @@ public class App {
     public static InsertionSort<Card> insertionSort = new InsertionSort();
 
     public static final List<Card> baralho = new ArrayList<>(List.of(
-            new Card("1", 1),
+            new Card("A", 1),
             new Card("2", 2),
             new Card("3", 3),
             new Card("4", 4),
@@ -66,7 +66,7 @@ public class App {
             System.out.print("Carta "+i+": ");
             cardList.add(
                     Util.getCardByName(
-                            scanner.nextLine().charAt(0)
+                            scanner.nextLine()
                     )
             );
         }
@@ -94,18 +94,21 @@ public class App {
     public static void sortWithMethod(int methodId, List<Card> cardList){
         if (methodId == 1){
             long start = System.currentTimeMillis();
+            System.out.println("[INFOS] Trocas:");
             bubbleSort.sortPrintingCards(cardList);
             long end = System.currentTimeMillis();
             System.out.println("[INFO] Tempo de execução: "+(end-start)+" ms");
         }
         else if (methodId == 2){
             long start = System.currentTimeMillis();
+            System.out.println("[INFOS] Trocas:");
             selectionSort.sortPrintingCards(cardList);
             long end = System.currentTimeMillis();
             System.out.println("[INFO] Tempo de execução: "+(end-start)+" ms");
         }
         else if (methodId == 3){
             long start = System.currentTimeMillis();
+            System.out.println("[INFOS] Trocas:");
             insertionSort.sortPrintingCards(cardList);
             long end = System.currentTimeMillis();
             System.out.println("[INFO] Tempo de execução: "+(end-start)+" ms");

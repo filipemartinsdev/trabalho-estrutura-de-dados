@@ -36,20 +36,21 @@ public class Util {
         System.out.println();
     }
 
-    public static Card getCardByName(char name){
+    public static Card getCardByName(String name){
         return switch (name){
-            case 'A', 'a' -> new Card("A", 1);
-            case '2' -> new Card("2", 3);
-            case '3' -> new Card("3", 4);
-            case '4' -> new Card("4", 5);
-            case '5' -> new Card("5", 6);
-            case '6' -> new Card("6", 7);
-            case '7' -> new Card("7", 8);
-            case '8' -> new Card("8", 9);
-            case '9' -> new Card("9", 10);
-            case 'J', 'j' -> new Card("J", 11);
-            case 'Q', 'q' -> new Card("Q", 12);
-            case 'K', 'k' -> new Card("K", 13);
+            case "A", "a" -> new Card("A", 1);
+            case "2" -> new Card("2", 2);
+            case "3" -> new Card("3", 3);
+            case "4" -> new Card("4", 4);
+            case "5" -> new Card("5", 5);
+            case "6" -> new Card("6", 6);
+            case "7" -> new Card("7", 7);
+            case "8" -> new Card("8", 8);
+            case "9" -> new Card("9", 9);
+            case "10" -> new Card("10", 10);
+            case "J", "j" -> new Card("J", 11);
+            case "Q", "q" -> new Card("Q", 12);
+            case "K", "k" -> new Card("K", 13);
             default -> new Card("?", 0);
         };
     }
