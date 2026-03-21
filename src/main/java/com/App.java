@@ -11,6 +11,8 @@ public class App {
     public static SelectionSort<Card> selectionSort = new SelectionSort();
     public static InsertionSort<Card> insertionSort = new InsertionSort();
 
+    // 8, J , 3, A, Q, 5, 10
+
     public static final List<Card> baralho = new ArrayList<>(List.of(
             new Card("A", 1),
             new Card("2", 2),
@@ -28,9 +30,6 @@ public class App {
     ));
 
     public static void main( String[] args ) {
-
-
-
         while(true){
             System.out.println(
                     """
@@ -93,25 +92,34 @@ public class App {
 
     public static void sortWithMethod(int methodId, List<Card> cardList){
         if (methodId == 1){
-            long start = System.currentTimeMillis();
+            double start = System.nanoTime();
+
             System.out.println("[INFOS] Trocas:");
             bubbleSort.sortPrintingCards(cardList);
-            long end = System.currentTimeMillis();
-            System.out.println("[INFO] Tempo de execução: "+(end-start)+" ms");
+
+            double end = System.nanoTime();
+
+            System.out.println("[INFO] Tempo de execução: "+(end-start)/1_000_000.0+" ms");
         }
         else if (methodId == 2){
-            long start = System.currentTimeMillis();
+            double start = System.nanoTime();
+
             System.out.println("[INFOS] Trocas:");
             selectionSort.sortPrintingCards(cardList);
-            long end = System.currentTimeMillis();
-            System.out.println("[INFO] Tempo de execução: "+(end-start)+" ms");
+
+            double end = System.nanoTime();
+
+            System.out.println("[INFO] Tempo de execução: "+(end-start)/1_000_000.0+" ms");
         }
         else if (methodId == 3){
-            long start = System.currentTimeMillis();
+            double start = System.nanoTime();
+
             System.out.println("[INFOS] Trocas:");
             insertionSort.sortPrintingCards(cardList);
-            long end = System.currentTimeMillis();
-            System.out.println("[INFO] Tempo de execução: "+(end-start)+" ms");
+
+            double end = System.nanoTime();
+
+            System.out.println("[INFO] Tempo de execução: "+(end-start)/1_000_000.0+" ms");
         }
         else {
             return;
